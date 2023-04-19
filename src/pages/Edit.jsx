@@ -15,7 +15,7 @@ const Edit = () => {
    const navigate = useNavigate();
 
    const getCourseData = () => {
-        axios.get(`http://localhost:4000/api/${id}`)
+        axios.get(`${import.meta.env.VITE_API_KEY}api/${id}`)
                 .then((response) => {
                     setTitle(response.data.title)
                     setDuration(response.data.duration)
@@ -38,7 +38,7 @@ const Edit = () => {
         fData.append("price",price)
         fData.append("isImage",isHandleImage)
 
-      axios.patch(`http://localhost:4000/api/${id}`,fData)
+      axios.patch(`${import.meta.env.VITE_API_KEY}api/${id}`,fData)
       .then((response)=>{
         console.log(response);
       }).catch((error) => {

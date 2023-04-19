@@ -14,12 +14,12 @@ const Users = ({stateEmail}) => {
   const usersWithoutCurrent = users.filter((u) => u.email != stateEmail)
 
   const getAllUesrs = async() => {
-    axios.get('http://localhost:4000/api/users').then((response)=>setUsers(response.data)).catch((error) => console.log(error));
+    axios.get(`${import.meta.env.VITE_API_KEY}api/users`).then((response)=>setUsers(response.data)).catch((error) => console.log(error));
   }
 
   const deleteHandle = (id) => {
     if(confirm("Are you sure to delete this user?This action can't be undone")){
-      axios.delete(`http://localhost:4000/api/${id}`).then((response) => {
+      axios.delete(`${import.meta.env.VITE_API_KEY}api/${id}`).then((response) => {
         console.log(response.data)
       }).catch((error) => console.log(error));
       

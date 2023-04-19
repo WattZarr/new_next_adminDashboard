@@ -8,12 +8,12 @@ const Register = () => {
   const [data,setData] = useState([]);
 
   const getData = () => {
-    axios.get('http://localhost:4000/api/register-info').then((response) => setData(response.data)).catch((error) => console.log(error))
+    axios.get(`${import.meta.env.VITE_API_KEY}api/register-info`).then((response) => setData(response.data)).catch((error) => console.log(error))
   }
 
   const deleteHandle = () => {
     if(confirm("Are you sure to delete this registration? This action can't be undone.")){
-        axios.delete(`http://localhost:4000/api/delete-register/${data[0]._id}`).then((response) => console.log(response.data)).catch((error) => console.log(error));
+        axios.delete(`${import.meta.env.VITE_API_KEY}api/delete-register/${data[0]._id}`).then((response) => console.log(response.data)).catch((error) => console.log(error));
     }
 
     getData();

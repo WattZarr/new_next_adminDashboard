@@ -14,7 +14,7 @@ const Login = ({token,setToken,setEmailState}) => {
   const loginHandler = async(e) => {
       e.preventDefault();
       console.log(email,password);
-      await axios.post('https://new-next-server.onrender.com/api/login',{email,password}).then((response) => {
+      await axios.post(`${import.meta.env.VITE_API_KEY}api/login`,{email,password}).then((response) => {
         if(response.data.msg == "OK"){
           setToken();
           setEmailState(email);

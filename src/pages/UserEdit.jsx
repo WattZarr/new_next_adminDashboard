@@ -13,7 +13,7 @@ const UserEdit = () => {
   const navigate = useNavigate();
 
   const getUserData = async() => {
-    axios.get(`http://localhost:4000/api/get-user/${id}`).then((response) => {
+    axios.get(`${import.meta.env.VITE_API_KEY}api/get-user/${id}`).then((response) => {
         setUser(response.data)
         setName(response.data.name);
         setEmail(response.data.email);
@@ -24,7 +24,7 @@ const UserEdit = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.patch(`http://localhost:4000/api/edit-user/${id}` , {name,email,password,role}).then((response) => {
+    axios.patch(`${import.meta.env.VITE_API_KEY}api/edit-user/${id}` , {name,email,password,role}).then((response) => {
         console.log(response.status);
     }).catch((error) => console.log(error))
 

@@ -12,7 +12,7 @@ const CreateUser = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:4000/api/create-user',{name,email,role,password}).then((response)=>console.log(response.data)).catch((error) => console.log(error));
+    axios.post(`${import.meta.env.VITE_API_KEY}api/create-user`,{name,email,role,password}).then((response)=>console.log(response.data)).catch((error) => console.log(error));
     navigate('/home/users')
   }
 

@@ -10,7 +10,7 @@ const Courses = () => {
   const [loading,setLoading] = useState(true)
 
   useEffect(()=>{
-    axios.get('http://localhost:4000/api').then((response) => {
+    axios.get(`${import.meta.env.VITE_API_KEY}api`).then((response) => {
       setCourses(response.data);
       setLoading(false)
     })

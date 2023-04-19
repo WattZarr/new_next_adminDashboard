@@ -25,7 +25,7 @@ const CreateCourse = () => {
     fData.append("level",level)
     fData.append("price",price)
 
-    axios.post('http://localhost:4000/api/create-course',fData)
+    axios.post(`${import.meta.env.VITE_API_KEY}api/create-course`,fData)
           .then((response)=>{
             console.log(response);
           }).catch((error) => {
