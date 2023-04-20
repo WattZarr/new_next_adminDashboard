@@ -8,7 +8,7 @@ const CourseCard = (data) => {
 
   const handleDelete = () => {
     if(confirm("Are you sure to delete this course?")){
-      axios.delete(`${import.meta.env.VITE_API_KEY}api/${data.data._id}`).then((response) => console.log(response.data)).catch((error) => console.log(error));
+      axios.delete(`${import.meta.env.VITE_API_KEY}api/delete-course/${data.data._id}`).then((response) => console.log(response.data)).catch((error) => console.log(error));
     }
   }
 

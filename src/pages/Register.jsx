@@ -55,7 +55,7 @@ const Register = () => {
           </thead>
           <tbody>
             {data?.map((e) => (
-                <tr className="bg-white border-b dark:bg-white dark:text-black">
+                <tr key={e._id} className="bg-white border-b dark:bg-white dark:text-black">
                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                         {e.name}
                     </th>
