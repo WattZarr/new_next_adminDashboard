@@ -46,7 +46,7 @@ const Courses = () => {
              <p>Loading</p>
           </div>
         )}
-        <div className='mx-4 flex gap-4 flex-wrap'>
+        <div className='mx-4 flex flex-col sm:flex-row gap-4 flex-wrap'>
           {courses?.map((e) => (
             <CourseCard key={e._id} data={e}></CourseCard>
           ))}

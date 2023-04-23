@@ -20,7 +20,7 @@ const CourseCard = (data) => {
   },[])
 
   return (
-        <div className='w-[30%] my-2 transform ease-in hover:scale-105 transition duration-200 border-2 px-2 py-2'>
+        <div className='w-full sm:w-[50%] lg:w-[30%] my-2 transform ease-in hover:scale-105 transition duration-200 border-2 px-2 py-2'>
             <img src={`${import.meta.env.VITE_API_KEY}upload/${data.data.image}`} className='w-full h-[25vh]' alt="" />
             <h2 className='font-semibold text-lg'>{data.data.title}</h2>
             <div className='flex gap-3 items-center'>

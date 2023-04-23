@@ -37,7 +37,7 @@ const Login = ({token,setToken,setEmailState}) => {
           {isLoginFail && (
             <p className='text-center text-xs mt-4 text-red-500'>Login Failed:Your email or password is incorrect! Please Try again.</p>
           ) }
-          <form className='mt-8 text-black w-[40%] mx-auto border-2 rounded-lg px-8 py-8' method='post' onSubmit={loginHandler}>
+          <form className='mt-8 text-black w-full md:w-[40%] mx-auto border-2 rounded-lg px-8 py-8' method='post' onSubmit={loginHandler}>
             <div className="relative z-0 w-full mb-6 group">
                 <input type="email" onChange={(e)=> setEmail(e.target.value)} name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required />
                 <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-black  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email <span></span> </label>

@@ -12,7 +12,7 @@ import UserEdit from './pages/UserEdit'
 
 const App = () => {
   return (
-    <div className='font-roboto max-w-[80%] mx-auto my-8 bg-slate-50 shadow-xl rounded-xl'>
+    <div className='font-roboto max-w-[100%] lg:max-w-[80%] mx-auto my-8 bg-slate-50 shadow-xl rounded-xl'>
       <Routes>
         <Route path='/' element={<Login/>}></Route>
         <Route path='home' element={<Home/>}>
